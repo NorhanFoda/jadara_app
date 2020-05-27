@@ -38,5 +38,11 @@ return [
     'please_enter_services' => 'من فضلك أدخل رابط الخدمات',
     'updated' => 'تم تعديل البيانات بنجاح',
 
+    // Edit profile
+    'users' => 'المستخدمين',
+    'edit_user' => 'تعديل مستخدم',
+    'name' => 'الإسم',
+    'image' => 'الصورة',
+
     'save' => 'حفظ',
 ];

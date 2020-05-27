@@ -38,5 +38,11 @@ return [
     'please_enter_services' => 'Please enter services link',
     'updated' => 'Data updated successfuly',
 
+    // Edit profile
+    'users' => 'Users',
+    'edit_user' => 'Edit user',
+    'name' => 'Name',
+    'image' => 'Image',
+
     'save' => 'Save',
 ];

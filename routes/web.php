@@ -30,6 +30,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
         Route::get('home', 'Admin\HomeController@index')->name('admin.home');
         Route::put('update_settings', 'Admin\HomeController@update')->name('settings.update');
         Route::post('delete_contact', 'Admin\HomeController@deleteContact')->name('contacts.delete');
+
+        // Users
+        Route::resource('users', 'Admin\UsersController');
         
         // Change lang
         Route::get('change_locale/{locale}', 'Admin\HomeController@change_locale')->name('change_locale');

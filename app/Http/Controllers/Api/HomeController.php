@@ -52,7 +52,8 @@ class HomeController extends Controller
             'phone' => 'required'
         ]);
 
-        Mail::to('Norhan.H.Foda@gmail.com')->send(new LoginMail($request->name, $request->phone));
+        $email = Setting::find(1)->email;
+        Mail::to($email)->send(new LoginMail($request->name, $request->phone));
         
         return response()->json([
             'success' => 'Email sent successfuly'

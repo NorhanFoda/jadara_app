@@ -142,6 +142,22 @@
                                     @endforeach
                                     {{-- location end --}}
 
+                                    {{-- enter email --}}
+                                    <div class="col-12">
+                                        <div class="form-group row">
+                                            <div class="col-md-2">
+                                                <span>{{trans('admin.email')}}</span>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" placeholder="{{trans('admin.email')}}" name="email" value="{{$settings->email}}">
+                                                <div class="invalid-feedback">
+                                                    {{trans('admin.please_enter_email')}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- enter email end --}}
+
                                     {{-- enter website --}}
                                     <div class="col-12">
                                         <div class="form-group row">

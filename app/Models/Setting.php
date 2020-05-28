@@ -11,6 +11,6 @@ class Setting extends Model
         'visit', 'meeting',
         'ticket', 'contact',
         'website', 'services', 
-        'clients_area'
+        'clients_area', 'email'
     ];
 }

@@ -301,99 +301,6 @@
                                         </div>
                                     </div>
                                     {{-- enter contact end --}}
-
-                                    {{-- additional links --}}
-                                    <div class="col-12">
-                                        <div class="form-group row">
-                                            <div class="col-md-2">
-                                                <span>{{trans('admin.additional_links')}}</span>
-                                            </div>
-                                            <div class="col-md-10">
-                                                <div class="input-group control-group increment_links" >
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <input type="file" name="icons[]" class="form-control" placeholder="{{trans('admin.icon')}}" accept=".gif, .jpg, .png, .webp">
-                                                            <div class="invalid-feedback">
-                                                                {{trans('admin.icon')}}
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <input type="text" name="text_ar[]" class="form-control" placeholder="{{trans('admin.text_ar')}}">
-                                                            <div class="invalid-feedback">
-                                                                {{trans('admin.text_ar')}}
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <input type="text" name="text_en[]" class="form-control" placeholder="{{trans('admin.text_en')}}">
-                                                            <div class="invalid-feedback">
-                                                                {{trans('admin.text_en')}}
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <input type="url" name="links[]" class="form-control" placeholder="{{trans('admin.link')}}">
-                                                            <div class="invalid-feedback">
-                                                                {{trans('admin.link')}}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="input-group-btn"> 
-                                                        <button class="btn btn-success link-btn-success" type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                                                    </div>
-                                                </div>
-                                                <div class="clone_links hidden">
-                                                    <div class="control-group input-group" style="margin-top:10px">
-                                                        <div class="row">
-                                                            <div class="col-md-3">
-                                                                <input type="file" name="icons[]" class="form-control" placeholder="{{trans('admin.icon')}}" accept=".gif, .jpg, .png, .webp">
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" name="text_ar[]" class="form-control" placeholder="{{trans('admin.text_ar')}}">
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" name="text_en[]" class="form-control" placeholder="{{trans('admin.text_en')}}">
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <input type="url" name="links[]" class="form-control" placeholder="{{trans('admin.link')}}">
-                                                            </div>
-                                                        </div>
-                                                        <div class="input-group-btn"> 
-                                                            <button class="btn btn-danger link-btn-danger" type="button"><i class="fa fa-minus" aria-hidden="true"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    @foreach ($links as $link)
-                                        <div class="col-12">
-                                            <div class="form-group row">
-                                                <div class="col-md-2"></div>
-                                                <div class="col-md-10" id="delete_link{{$link->id}}">
-                                                    <div class="control-group input-group" style="margin-top:10px">
-                                                        <div class="row">
-                                                            <div class="col-md-3">
-                                                                <img src="{{$link->icon}}" width="20px" height="20px" alt="{{\App::getLocale() == 'ar' ? $link->text_ar : $link->text_en}}">
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" disabled class="form-control" value="{{$link->text_ar}}" placeholder="{{trans('admin.text_ar')}}">
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" disabled class="form-control" value="{{$link->text_en}}" placeholder="{{trans('admin.text_en')}}">
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" disabled class="form-control" value="{{$link->link}}" placeholder="{{trans('admin.link')}}">
-                                                            </div>
-                                                        </div>
-                                                        <div class="input-group-btn"> 
-                                                            <button class="btn btn-danger" onclick="deletelink({{$link->id}})" type="button"><i class="fa fa-minus" aria-hidden="true"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                    {{-- additional kinks end --}}
     
                                     <div class="col-12 text-center">
                                         <button type="submit" class="btn btn-primary mr-1 mb-1 waves-effect waves-light">{{trans('admin.save')}}</button>
@@ -413,23 +320,13 @@
 @section('scripts')
     <script>
         $(document).ready(function(){
-            //add multi contatcs
+            //add multi images
             $(".img-btn-success").click(function(){ 
                 var html = $(".clone").html();
                 $(".increment").after(html);
             });
 
             $("body").on("click",".img-btn-danger",function(){ 
-                $(this).parents(".control-group").remove();
-            });
-
-            //add multi links
-            $(".link-btn-success").click(function(){ 
-                var html = $(".clone_links").html();
-                $(".increment_links").after(html);
-            });
-
-            $("body").on("click",".link-btn-danger",function(){ 
                 $(this).parents(".control-group").remove();
             });
         });
@@ -443,21 +340,6 @@
                 data: {
                     "_token" : "{{csrf_token()}}",
                     id: contact_id
-                },
-                success: function(data){
-                }
-            });
-        }
-
-        function deletelink(link_id){
-            $('#delete_link'+link_id).remove();
-            $.ajax({
-                url: "{{route('links.delete')}}",
-                type: "POST",
-                dataType: "html",
-                data: {
-                    "_token" : "{{csrf_token()}}",
-                    id: link_id
                 },
                 success: function(data){
                 }

@@ -44,5 +44,12 @@ return [
     'name' => 'الإسم',
     'image' => 'الصورة',
 
+    // Addtitional links
+    'text_ar' => 'النص بالعربية',
+    'text_en' => 'النص بالإنجليزية',
+    'icon' => 'الأيقونة',
+    'link' => 'الرابط',
+    'additional_links' => 'روابط إضافية',
+
     'save' => 'حفظ',
 ];

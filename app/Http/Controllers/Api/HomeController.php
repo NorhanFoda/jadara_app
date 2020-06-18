@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Setting;
 use App\Models\Contact;
+use App\Models\Link;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\LoginMail;
 
@@ -56,7 +57,15 @@ class HomeController extends Controller
         Mail::to($email)->send(new LoginMail($request->name, $request->phone));
         
         return response()->json([
-            'success' => 'Email sent successfuly'
+            'status_en' => 'Email sent successfuly',
+            'status_ar' => 'تم إرسال بياناتك بجاح',
         ], 200);
+    }
+
+    public function getAdditionalLinks(){
+        $links = Link::get(['icon', 'text_ar', 'text_en', 'link']);
+        return response()->json([
+            'additional_links' => $links
+        ]);
     }
 }

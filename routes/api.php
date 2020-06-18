@@ -22,3 +22,4 @@ Route::get('services', 'Api\HomeController@getServicesLink');
 Route::get('clients_area', 'Api\HomeController@getClientsAreaLink');
 Route::get('contacts', 'Api\HomeController@getContacts');
 Route::post('login_user', 'Api\HomeController@loginUser');
+Route::get('additional_links', 'Api\HomeController@getAdditionalLinks');

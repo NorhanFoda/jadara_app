@@ -44,5 +44,12 @@ return [
     'name' => 'Name',
     'image' => 'Image',
 
+    // Addtitional links
+    'text_ar' => 'Text in Arabic',
+    'text_en' => 'Text in English',
+    'icon' => 'Icon',
+    'link' => 'Link',
+    'additional_links' => 'Additional links',
+
     'save' => 'Save',
 ];

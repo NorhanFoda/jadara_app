@@ -23,3 +23,12 @@ Route::get('clients_area', 'Api\HomeController@getClientsAreaLink');
 Route::get('contacts', 'Api\HomeController@getContacts');
 Route::post('login_user', 'Api\HomeController@loginUser');
 Route::get('additional_links', 'Api\HomeController@getAdditionalLinks');
+
+// Notificaions
+// Route::post('notification', 'Api\NotificationController@enableDisableNotification');
+Route::get('notifications_count', 'Api\NotificationController@getNotificationsCount');
+Route::get('user_notifications', 'Api\NotificationController@getUserNotifications');
+
+// DeviceTokens
+Route::get('tokens', 'Api\DeviceTokensController@index');
+Route::post('tokens', 'Api\DeviceTokensController@create');

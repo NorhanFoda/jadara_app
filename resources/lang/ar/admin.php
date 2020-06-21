@@ -51,5 +51,15 @@ return [
     'link' => 'الرابط',
     'additional_links' => 'روابط إضافية',
 
+    // Notifications
+    'notifications' => 'الإشعارات',
+    'sent_date' => 'تاريخ الإرسال',
+    'action' => 'الضبط',
+    'notify' => 'إضافة إشعار',
+    'msg_ar' => 'الرسالة بالعربية',
+    'msg_en' => 'الرسالة بالإنجليزية',
+    'send' => 'إرسال',
+    'notification_created' => 'تم إرسال الإشعار',
+
     'save' => 'حفظ',
 ];

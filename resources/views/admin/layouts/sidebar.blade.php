@@ -12,8 +12,8 @@
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
-            <li class=" nav-item"><a href="home"><i class="fa fa-home"></i><span class="menu-title" data-i18n="Email">{{trans('admin.settings')}}</span></a>
-            </li>
+            <li class=" nav-item"><a href="home"><i class="fa fa-home"></i><span class="menu-title" data-i18n="Email">{{trans('admin.settings')}}</span></a></li>
+            <li class=" nav-item"><a href="{{route('notifications.index')}}"><i class="fa fa-bell"></i><span class="menu-title" data-i18n="Email">{{trans('admin.notifications')}}</span></a></li>
 
         </ul>
     </div>

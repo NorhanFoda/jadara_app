@@ -34,6 +34,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 
         // Users
         Route::resource('users', 'Admin\UsersController');
+
+        // Notifications
+        Route::get('get_notifications', 'Admin\NotificationController@index')->name('notifications.index');
+        Route::get('notifications', 'Admin\NotificationController@create')->name('notifications.create');
+        Route::post('notifications', 'Admin\NotificationController@store')->name('notifications.store');
+        Route::post('/notifications_delete', 'Admin\NotificationController@delete')->name('notifications.delete');
         
         // Change lang
         Route::get('change_locale/{locale}', 'Admin\HomeController@change_locale')->name('change_locale');

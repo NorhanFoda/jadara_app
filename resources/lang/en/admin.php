@@ -51,5 +51,15 @@ return [
     'link' => 'Link',
     'additional_links' => 'Additional links',
 
+    // Notifications
+    'notifications' => 'Notifications',
+    'sent_date' => 'Sent since',
+    'action' => 'Action',
+    'notify' => 'Add new notification',
+    'msg_ar' => 'Message in Arabic',
+    'msg_en' => 'Message in English',
+    'send' => 'Send',
+    'notification_created' => 'Notification sent',
+
     'save' => 'Save',
 ];

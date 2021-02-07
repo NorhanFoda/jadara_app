@@ -45,46 +45,11 @@ class HomeController extends Controller
             }
         }
 
-        if($request->has('icons') || $request->has('text_ar') || $request->has('text_en') || $request->has('links')){
-            $this->validate($request, [
-                'icons' => 'required',
-                'text_ar' => 'required',
-                'text_en' => 'required',
-                'links' => 'required',
-            ]);
-            $icons = $request->icons;
-            $links = $request->links;
-            $text_ar = $request->text_ar;
-            $text_en = $request->text_en;
-
-            for($i = 0; $i < count($icons); $i++){
-                $link = new Link();
-                //Make image name unique
-                $full_file_name = $icons[$i];
-                $file_name = pathinfo($full_file_name, PATHINFO_FILENAME);
-                $extension = $icons[$i]->getClientOriginalExtension();
-                $file_name_to_store = $file_name.'_'.time().'.'.$extension;
-
-                //Upload icon
-                $path = $icons[$i]->move(public_path('/images/'), $file_name_to_store);
-                $url = url('/images/'.$file_name_to_store);
-                $link->icon = $url;
-                $link->text_ar = $text_ar[$i];
-                $link->text_en = $text_en[$i];
-                $link->link = $links[$i];
-                $link->save();
-            }
-        }
-
         session()->flash('message', trans('admin.updated'));
         return redirect()->back();
     }
 
     public function deleteContact(Request $request){
         Contact::find($request->id)->delete();
-    }
-
-    public function deleteLink(Request $request){
-        Link::find($request->id)->delete();
     }
 }

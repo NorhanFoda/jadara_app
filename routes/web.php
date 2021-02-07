@@ -30,7 +30,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
         Route::get('home', 'Admin\HomeController@index')->name('admin.home');
         Route::put('update_settings', 'Admin\HomeController@update')->name('settings.update');
         Route::post('delete_contact', 'Admin\HomeController@deleteContact')->name('contacts.delete');
-        Route::post('delete_link', 'Admin\HomeController@deleteLink')->name('links.delete');
+
+        // Additional links
+        Route::resource('links', 'Admin\LinkController');
+        Route::post('delete_link', 'Admin\LinkController@deleteLink')->name('links.delete');
 
         // Users
         Route::resource('users', 'Admin\UsersController');

@@ -62,4 +62,13 @@ return [
     'notification_created' => 'Notification sent',
 
     'save' => 'Save',
+    'add' => 'Add',
+    'error' => 'Operation con not be completed',
+    'alert_title' => 'Are you sure?',
+    'yes' => 'Yes',
+    'no' => 'No',
+    'alert_cancelled' => 'Operation cancelled',
+    'deleted' => 'Deleted successfully',
+    'updated' => 'Updated successfully',
+    'created' => 'Created successfully',
 ];

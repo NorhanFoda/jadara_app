@@ -19,7 +19,7 @@ class ContactSeeder extends Seeder
                 'phone_2' => '0565423498',
             ],
             [
-                'location_ar' => 'الإمارات العربية السعودية',
+                'location_ar' => 'الإمارات العربية المتحدة',
                 'location_en' => 'The United Arab Emirates',
                 'phone_1' => '0547775300',
                 'phone_2' => null,

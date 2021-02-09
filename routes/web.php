@@ -11,6 +11,18 @@
 |
 */
 
+Route::get('/', function(){
+
+    // dd('1');
+    redirect()->route('admin.home');
+});
+
+Route::get('admin', function(){
+
+    dd('2');
+    redirect()->route('admin.login');
+});
+
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
@@ -24,7 +36,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Route::get('admin-password/reset/{email}', 'Admin\Auth\ResetPasswordController@showResetForm')->name('admin.password.reset');
     Route::post('admin-password/update', 'Admin\Auth\ResetPasswordController@update')->name('admin.password.update');
 
-    Route::group(['prefix' => 'admin/'], function(){
+    Route::group(['prefix' => 'admin/', 'middleware' => 'auth'], function(){
 
         // Home page
         Route::get('home', 'Admin\HomeController@index')->name('admin.home');

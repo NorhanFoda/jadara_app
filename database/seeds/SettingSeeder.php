@@ -14,6 +14,7 @@ class SettingSeeder extends Seeder
         DB::table('settings')->insert([
             [
                 'email' => 'sales@jaadara.com',
+                'email2' => 'info@jaadara.com',
                 'website' => 'https://jaadara.com/',
                 'services' => 'https://jaadara.com/',
                 'clients_area' => 'https://jaadara.com/support/clientarea.php',
@@ -23,6 +24,10 @@ class SettingSeeder extends Seeder
                 'meeting' => 'https://jaadara.com/online-meet/', 
                 'ticket' => 'https://jaadara.com/support/clientarea.php',
                 'contact' => 'https://jaadara.com/support/contact.php',
+                'contact_title' => 'دعنا نساعدك',
+                'contact_subtitle' => 'وسائل الإتصال',
+                'contact_description' => 'يمكنك إختيار الدوله الخاصة بك و تواصل معنا من خلال أحد قنوات التواصل و سوف خبير من مهندسى الشركة بالتواصل معك و الإجابة عن إستفساراتك',
+                'contact_image' => '/images/f4.png',
             ],
         ]); 
     }

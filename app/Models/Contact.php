@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-    protected $fillable = ['location_ar', 'location_en' ,'phone_1', 'phone_2'];
+    protected $fillable = [
+        'location_ar', 
+        'location_en' ,
+        'flag',
+        'phone', 
+        'whatsapp_ar',
+        'whatsapp_en',
+    ];
 }

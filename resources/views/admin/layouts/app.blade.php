@@ -140,11 +140,11 @@
             buttonsStyling: true
         });
         swalWithBootstrapButtons.fire({
-            title: '{{trans('sweet_alert.title')}}',
+            title: '{{trans('admin.title')}}',
             type: 'warning',
             showCancelButton: true,
-            confirmButtonText: '{{trans('sweet_alert.yes')}}',
-            cancelButtonText: '{{trans('sweet_alert.no')}}',
+            confirmButtonText: '{{trans('admin.yes')}}',
+            cancelButtonText: '{{trans('admin.no')}}',
         }).then((result) => {
             if (result.value) {
                 $.ajaxSetup({
@@ -170,9 +170,9 @@
                         elem.remove();
                         proelem.remove();
                         swalWithBootstrapButtons.fire({
-                            title: '{{trans('sweet_alert.deleted_successfully')}}',
+                            title: '{{trans('admin.deleted_successfully')}}',
                             showConfirmButton: false,
-                            timer: 1000
+                            timer: 1500
                         });
                     }
                 });
@@ -181,9 +181,9 @@
                 result.dismiss === Swal.DismissReason.cancel
             ) {
                 swalWithBootstrapButtons.fire({
-                    title: '{{trans('sweet_alert.cancelled')}}',
+                    title: '{{trans('admin.cancelled')}}',
                     showConfirmButton: false,
-                    timer: 1000
+                    timer: 1500
                 });
 
             }
@@ -199,7 +199,7 @@
         Swal.fire({
             title: "{{ session()->get('success')}}",
             type: 'success',
-            timer: 1500,
+            timer: 2500,
             showCancelButton: false,
             showConfirmButton: false,
         });
@@ -212,7 +212,7 @@
         Swal.fire({
             title: "{{ session()->get('error')}}",
             type: 'error',
-            timer: 1500,
+            timer: 2500,
             showCancelButton: false,
             showConfirmButton: false,
         });

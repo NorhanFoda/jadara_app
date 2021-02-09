@@ -17,8 +17,10 @@ class CreateContactsTable extends Migration
             $table->bigIncrements('id');
             $table->string('location_ar');
             $table->string('location_en');
-            $table->string('phone_1')->nullable();
-            $table->string('phone_2')->nullable();
+            $table->string('flag')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('whatsapp_ar')->nullable();
+            $table->string('whatsapp_en')->nullable();
             $table->timestamps();
         });
     }

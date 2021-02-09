@@ -58,30 +58,48 @@
                                             <div class="col-md-10">
                                                 <div class="input-group control-group increment" >
                                                     <div class="row">
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-6">
                                                             <input type="text" name="contact_locations_ar[]" class="form-control" placeholder="{{trans('admin.location_ar')}}">
                                                             <div class="invalid-feedback">
-                                                                {{trans('admin.please_enter_contact_us_location')}}
+                                                                {{trans('admin.location_ar')}}
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <br><br>
+                                                        <div class="col-md-6">
                                                             <input type="text" name="contact_locations_en[]" class="form-control" placeholder="{{trans('admin.location_en')}}">
                                                             <div class="invalid-feedback">
-                                                                {{trans('admin.please_enter_contact_us_location')}}
+                                                                {{trans('admin.location_en')}}
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <br><br>
+                                                        <div class="col-md-6">
                                                             <input type="text" name="contact_phones_1[]" class="form-control" placeholder="{{trans('admin.phone')}}">
                                                             <div class="invalid-feedback">
-                                                                {{trans('admin.please_enter_contact_us_phone_1')}}
+                                                                {{trans('admin.phone')}}
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-3">
-                                                            <input type="text" name="contact_phones_2[]" class="form-control" placeholder="{{trans('admin.phone')}}">
+                                                        <br><br>
+                                                        <div class="col-md-6">
+                                                            <input type="text" name="contact_phones_2[]" class="form-control" placeholder="{{trans('admin.whatsapp_ar')}}">
                                                             <div class="invalid-feedback">
-                                                                {{trans('admin.please_enter_contact_us_phone_2')}}
+                                                                {{trans('admin.whatsapp_ar')}}
                                                             </div>
                                                         </div>
+                                                        <br><br>
+                                                        <div class="col-md-6">
+                                                            <input type="text" name="contact_phones_3[]" class="form-control" placeholder="{{trans('admin.whatsapp_en')}}">
+                                                            <div class="invalid-feedback">
+                                                                {{trans('admin.whatsapp_en')}}
+                                                            </div>
+                                                        </div>
+                                                        <br><br>
+                                                        <div class="col-md-6">
+                                                            <input type="file" name="flags[]" class="form-control" placeholder="{{trans('admin.flag')}}" accept=".gif, .jpg, .png, .webp">
+                                                            <div class="invalid-feedback">
+                                                                {{trans('admin.flag')}}
+                                                            </div>
+                                                        </div>
+                                                        <br><br>
                                                     </div>
                                                     <div class="input-group-btn"> 
                                                         <button class="btn btn-success img-btn-success" type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
@@ -90,18 +108,30 @@
                                                 <div class="clone hidden">
                                                     <div class="control-group input-group" style="margin-top:10px">
                                                         <div class="row">
-                                                            <div class="col-md-3">
+                                                            <div class="col-md-6">
                                                                 <input type="text" name="contact_locations_ar[]" class="form-control" placeholder="{{trans('admin.location_ar')}}">
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <br><br>
+                                                            <div class="col-md-6">
                                                                 <input type="text" name="contact_locations_en[]" class="form-control" placeholder="{{trans('admin.location_en')}}">
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <br><br>
+                                                            <div class="col-md-6" dir="ltr">
                                                                 <input type="text" name="contact_phones_1[]" class="form-control" placeholder="{{trans('admin.phone')}}">
                                                             </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" name="contact_phones_2[]" class="form-control" placeholder="{{trans('admin.phone')}}">
+                                                            <br><br>
+                                                            <div class="col-md-6" dir="ltr">
+                                                                <input type="text" name="contact_phones_2[]" class="form-control" placeholder="{{trans('admin.whatsapp_ar')}}">
                                                             </div>
+                                                            <br><br>
+                                                            <div class="col-md-6" dir="ltr">
+                                                                <input type="text" name="contact_phones_3[]" class="form-control" placeholder="{{trans('admin.whatsapp_en')}}">
+                                                            </div>
+                                                            <br><br>
+                                                            <div class="col-md-6">
+                                                                <input type="file" name="flags[]" class="form-control" placeholder="{{trans('admin.flag')}}">
+                                                            </div>
+                                                            <br><br>
                                                         </div>
                                                         <div class="input-group-btn"> 
                                                             <button class="btn btn-danger img-btn-danger" type="button"><i class="fa fa-minus" aria-hidden="true"></i></button>
@@ -119,18 +149,30 @@
                                                 <div class="col-md-10" id="delete_contact{{$con->id}}">
                                                     <div class="control-group input-group" style="margin-top:10px">
                                                         <div class="row">
-                                                            <div class="col-md-3">
+                                                            <div class="col-md-6">
                                                                 <input type="text" disabled class="form-control" value="{{$con->location_ar}}" placeholder="{{trans('admin.location_ar')}}">
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <br><br>
+                                                            <div class="col-md-6">
                                                                 <input type="text" disabled class="form-control" value="{{$con->location_en}}" placeholder="{{trans('admin.location_en')}}">
                                                             </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" disabled class="form-control" value="{{$con->phone_1}}" placeholder="{{trans('admin.phone')}}">
+                                                            <br><br>
+                                                            <div class="col-md-6" dir="ltr">
+                                                                <input type="text" disabled class="form-control" value="{{$con->phone}}" placeholder="{{trans('admin.phone')}}">
                                                             </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" disabled class="form-control" value="{{$con->phone_2}}" placeholder="{{trans('admin.phone')}}">
+                                                            <br><br>
+                                                            <div class="col-md-6" dir="ltr">
+                                                                <input type="text" disabled class="form-control" value="{{$con->whatsapp_ar}}" placeholder="{{trans('admin.whatsapp_ar')}}">
                                                             </div>
+                                                            <br><br>
+                                                            <div class="col-md-6" dir="ltr">
+                                                                <input type="text" disabled class="form-control" value="{{$con->whatsapp_en}}" placeholder="{{trans('admin.whatsapp_en')}}">
+                                                            </div>
+                                                            <br><br>
+                                                            <div class="col-md-6">
+                                                                <img src="{{$con->flag}}" alt="flag" width="50px" height="50px">
+                                                            </div>
+                                                            <br><br>
                                                         </div>
                                                         <div class="input-group-btn"> 
                                                             <button class="btn btn-danger" onclick="deleteContact({{$con->id}})" type="button"><i class="fa fa-minus" aria-hidden="true"></i></button>
@@ -151,12 +193,28 @@
                                             <div class="col-md-10">
                                                 <input type="text" class="form-control" placeholder="{{trans('admin.email')}}" name="email" value="{{$settings->email}}">
                                                 <div class="invalid-feedback">
-                                                    {{trans('admin.please_enter_email')}}
+                                                    {{trans('admin.email')}}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     {{-- enter email end --}}
+
+                                    {{-- enter email2 --}}
+                                    <div class="col-12">
+                                        <div class="form-group row">
+                                            <div class="col-md-2">
+                                                <span>{{trans('admin.email2')}}</span>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" placeholder="{{trans('admin.email2')}}" name="email2" value="{{$settings->email2}}">
+                                                <div class="invalid-feedback">
+                                                    {{trans('admin.email2')}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- enter email2 end --}}
 
                                     {{-- enter website --}}
                                     <div class="col-12">
@@ -167,7 +225,7 @@
                                             <div class="col-md-10">
                                                 <input type="tel" class="form-control" placeholder="{{trans('admin.website')}}" name="website" value="{{$settings->website}}">
                                                 <div class="invalid-feedback">
-                                                    {{trans('admin.please_enter_website')}}
+                                                    {{trans('admin.website')}}
                                                 </div>
                                             </div>
                                         </div>
@@ -183,7 +241,7 @@
                                             <div class="col-md-10">
                                                 <input type="tel" class="form-control" placeholder="{{trans('admin.services')}}" name="services" value="{{$settings->services}}">
                                                 <div class="invalid-feedback">
-                                                    {{trans('admin.please_enter_services')}}
+                                                    {{trans('admin.services')}}
                                                 </div>
                                             </div>
                                         </div>
@@ -199,7 +257,7 @@
                                             <div class="col-md-10">
                                                 <input type="tel" class="form-control" placeholder="{{trans('admin.clients_area')}}" name="clients_area" value="{{$settings->clients_area}}">
                                                 <div class="invalid-feedback">
-                                                    {{trans('admin.please_enter_clients_area')}}
+                                                    {{trans('admin.clients_area')}}
                                                 </div>
                                             </div>
                                         </div>
@@ -247,7 +305,7 @@
                                             <div class="col-md-10">
                                                 <input type="url" class="form-control" placeholder="{{trans('admin.visit')}}" name="visit" value="{{$settings->visit}}">
                                                 <div class="invalid-feedback">
-                                                    {{trans('admin.please_enter_visit')}}
+                                                    {{trans('admin.visit')}}
                                                 </div>
                                             </div>
                                         </div>
@@ -263,7 +321,7 @@
                                             <div class="col-md-10">
                                                 <input type="url" class="form-control" placeholder="{{trans('admin.meeting')}}" name="meeting" value="{{$settings->meeting}}">
                                                 <div class="invalid-feedback">
-                                                    {{trans('admin.please_enter_meeting')}}
+                                                    {{trans('admin.meeting')}}
                                                 </div>
                                             </div>
                                         </div>
@@ -279,7 +337,7 @@
                                             <div class="col-md-10">
                                                 <input type="url" class="form-control" placeholder="{{trans('admin.ticket')}}" name="ticket" value="{{$settings->ticket}}">
                                                 <div class="invalid-feedback">
-                                                    {{trans('admin.please_enter_ticket')}}
+                                                    {{trans('admin.ticket')}}
                                                 </div>
                                             </div>
                                         </div>
@@ -295,12 +353,86 @@
                                             <div class="col-md-10">
                                                 <input type="url" class="form-control" placeholder="{{trans('admin.contact')}}" name="contact" value="{{$settings->contact}}">
                                                 <div class="invalid-feedback">
-                                                    {{trans('admin.please_enter_contact')}}
+                                                    {{trans('admin.contact')}}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     {{-- enter contact end --}}
+
+                                    {{-- enter contact_title --}}
+                                    <div class="col-12">
+                                        <div class="form-group row">
+                                            <div class="col-md-2">
+                                                <span>{{trans('admin.contact_title')}}</span>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" placeholder="{{trans('admin.contact_title')}}" name="contact_title" value="{{$settings->contact_title}}">
+                                                <div class="invalid-feedback">
+                                                    {{trans('admin.contact_title')}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- enter contact_title end --}}
+
+                                    {{-- enter contact_subtitle --}}
+                                    <div class="col-12">
+                                        <div class="form-group row">
+                                            <div class="col-md-2">
+                                                <span>{{trans('admin.contact_subtitle')}}</span>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" placeholder="{{trans('admin.contact_subtitle')}}" name="contact_subtitle" value="{{$settings->contact_subtitle}}">
+                                                <div class="invalid-feedback">
+                                                    {{trans('admin.contact_subtitle')}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- enter contact_subtitle end --}}
+
+                                    {{-- enter contact_description --}}
+                                    <div class="col-12">
+                                        <div class="form-group row">
+                                            <div class="col-md-2">
+                                                <span>{{trans('admin.contact_description')}}</span>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <textarea name="contact_description" class="form-control" cols="30" rows="6" placeholder="{{trans('admin.contact_description')}}">{{$settings->contact_description}}</textarea>
+                                                <div class="invalid-feedback">
+                                                    {{trans('admin.contact_description')}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- enter contact_description end --}}
+
+                                    {{-- enter image --}}
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <div class="col-md-2">
+                                                <span>{{trans('admin.contact_image')}}</span>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <input type="file" name="contact_image" class="form-control" placeholder="{{trans('admin.contact_image')}}" accept=".gif, .jpg, .png, .webp">
+                                                <div class="invalid-feedback">
+                                                    {{trans('admin.contact_image')}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <img src="{{$settings->contact_image}}" alt="" width="100px" height="100px" style="border-radius: 5px">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- enter image end --}}
     
                                     <div class="col-12 text-center">
                                         <button type="submit" class="btn btn-primary mr-1 mb-1 waves-effect waves-light">{{trans('admin.save')}}</button>
@@ -342,16 +474,57 @@
         });
 
         function deleteContact(contact_id){
-            $('#delete_contact'+contact_id).remove();
-            $.ajax({
-                url: "{{route('contacts.delete')}}",
-                type: "POST",
-                dataType: "html",
-                data: {
-                    "_token" : "{{csrf_token()}}",
-                    id: contact_id
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'swal2-confirm',
+                    cancelButton: 'swal2-cancel'
                 },
-                success: function(data){
+                buttonsStyling: true
+            });
+            swalWithBootstrapButtons.fire({
+                title: '{{trans("admin.title")}}',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonText: '{{trans("admin.yes")}}',
+                cancelButtonText: '{{trans("admin.no")}}',
+            }).then((result) => {
+                if (result.value) {
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+
+                    $('#delete_contact'+contact_id).remove();
+                    
+                    var token = $('meta[name="csrf-token"]').attr('content');
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "{{route('contacts.delete')}}",
+                        data: {
+                            id: contact_id,
+                            _token: token
+                        } ,
+                        dataType: 'json',
+                        success: function (result) {
+                            swalWithBootstrapButtons.fire({
+                                title: '{{trans("admin.deleted_successfully")}}',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
+                    });
+                } else if (
+                    // / Read more about handling dismissals below /
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire({
+                        title: '{{trans("admin.cancelled")}}',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+
                 }
             });
         }

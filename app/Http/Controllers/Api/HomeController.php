@@ -34,16 +34,22 @@ class HomeController extends Controller
     }
 
     public function getContacts(){
-        $contacts = Contact::get(['location_ar', 'location_en', 'phone_1', 'phone_2']);
+        $contacts = Contact::all();
         $setting = Setting::find(1);
         return response()->json([
             'contacts' => $contacts,
-            'whatsapp_contact' => $setting->whatsapp,
-            'direct_chat' => $setting->chat,
-            'visit_request' => $setting->visit,
-            'online_meeting' => $setting->meeting,
-            'ticket' => $setting->ticket,
-            'contact_request' => $setting->contact,
+            'email' => $setting->email,
+            'email2' => $setting->email2,
+            'contact_title' => $setting->contact_title,
+            'contact_subtitle' => $setting->contact_subtitle,
+            'contact_description' => $setting->contact_description,
+            'contact_image' => $setting->contact_image,
+            // 'whatsapp_contact' => $setting->whatsapp,
+            // 'direct_chat' => $setting->chat,
+            // 'visit_request' => $setting->visit,
+            // 'online_meeting' => $setting->meeting,
+            // 'ticket' => $setting->ticket,
+            // 'contact_request' => $setting->contact,
         ], 200);
     }
 

@@ -5,6 +5,7 @@ return [
     'login' => 'Login',
     'password' => 'Password',
     'email' => 'Email',
+    'email2' => 'Another email',
     'remember' => 'Remember me',
     'forget' => 'Forgot password?',
 
@@ -37,6 +38,18 @@ return [
     'services' => 'Services link',
     'please_enter_services' => 'Please enter services link',
     'updated' => 'Data updated successfuly',
+    'whatsapp_ar' => 'Whatsapp number for contact in Arabic',
+    'whatsapp_en' => 'Whatsapp number for contatc in English',
+    'flag' => 'Flag',
+    'title' => 'Are you sure you want to delete?',
+    'yes' => 'Yes',
+    'no' => 'No',
+    'deleted_successfully' => 'Deleted Successfully',
+    'cancelled' => 'Cancled',
+    'contact_title' => 'Contacts title',
+    'contact_subtitle' => 'Contacts subtitle',
+    'contact_description' => 'Contacts descriptions',
+    'contact_image' => 'Contacts image',
 
     // Edit profile
     'users' => 'Users',

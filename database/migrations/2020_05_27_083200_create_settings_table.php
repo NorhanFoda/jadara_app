@@ -16,6 +16,7 @@ class CreateSettingsTable extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('email')->unique();
+            $table->string('email2')->unique();
             $table->string('website')->nullable();
             $table->string('services')->nullable();
             $table->string('clients_area')->nullable();
@@ -25,6 +26,10 @@ class CreateSettingsTable extends Migration
             $table->string('meeting')->nullable();
             $table->string('ticket')->nullable();
             $table->string('contact')->nullable();
+            $table->string('contact_title')->nullable();
+            $table->string('contact_subtitle')->nullable();
+            $table->string('contact_description')->nullable();
+            $table->string('contact_image')->nullable();
             $table->timestamps();
         });
     }
